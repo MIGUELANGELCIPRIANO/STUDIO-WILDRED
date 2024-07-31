@@ -1,10 +1,95 @@
 /* Custom Properties */
 
+:root {
+	--tango: #f26716;
+	--tango-25: #f2671640;
+	--fire: #a62f03;
+	--indian-tan: #591202;
+	--indian-tan-75: #591202bf;
+	--sepia-black: #260101;
+	--sepia-black-75: #260101bf;
+	--cod-gray: #0d0d0d;
+}
+
 /* Reset Styles */
+
+a {
+	text-decoration: none;
+	color: var(--bs-gray-500);
+	transition: all 0.3s ease-out;
+}
+
+a:hover {
+	color: var(--tango);
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+
+small {
+	color: var(--bs-gray-500);
+}
 
 /* Bootstrap Styles */
 
+.bg-dark {
+	background-color: var(--cod-gray) !important;
+}
+
+.navbar-toggler {
+	--bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28173, 181, 189%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+	border: var(--bs-border-width) solid var(--bs-gray-500);
+	transition: all 0.3s ease-out;
+}
+
+.navbar-toggler:hover {
+	--bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28242, 103, 22%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+	border: var(--bs-border-width) solid var(--tango);
+}
+
+.navbar-toggler:focus {
+	box-shadow: none;
+}
+
+.navbar-toggler[aria-expanded='true'] {
+	--bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28242, 103, 22%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+	border: var(--bs-border-width) solid var(--tango);
+}
+
+.navbar-toggler[aria-expanded='false'] {
+	--bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28173, 181, 189%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+	border: var(--bs-border-width) solid var(--bs-gray-500);
+}
+
+.nav-link {
+	padding-left: 1rem;
+	color: var(--bs-gray-500);
+	font-weight: 600;
+	transition: all 0.3s ease-out;
+}
+
+.nav-link.active {
+	color: var(--tango) !important;
+}
+
+.nav-link:hover {
+	color: var(--tango);
+}
+
 /* My Styles */
+
+.bg-hero-image {
+	background: linear-gradient(
+			0deg,
+			var(--sepia-black-75),
+			var(--sepia-black-75)
+		),
+		var(--bg-image);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
 
 /* X-Small devices (portrait phones, less than 576px) */
 /* No media query for `xs` since this is the default in Bootstrap */
