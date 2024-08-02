@@ -101,6 +101,10 @@ small {
 	background-position: center;
 }
 
+.main-hero-block {
+	text-shadow: 0 0 10px var(--cod-gray);
+}
+
 /* X-Small devices (portrait phones, less than 576px) */
 /* No media query for `xs` since this is the default in Bootstrap */
 
