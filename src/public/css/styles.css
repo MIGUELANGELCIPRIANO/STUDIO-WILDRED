@@ -47,6 +47,28 @@ small {
 	background-color: var(--tango);
 }
 
+.form-control {
+	color: var(--bs-white-rgb);
+	background-color: var(--indian-tan-75);
+	border: var(--bs-border-width) solid var(--fire);
+	transition: all 0.15s ease-in-out;
+}
+
+.form-control:focus {
+	color: var(--bs-white-rgb);
+	background-color: var(--indian-tan-75);
+	border: var(--bs-border-width) solid var(--fire);
+	box-shadow: 0 0 0 0.25rem var(--tango-25);
+}
+
+.form-control::placeholder {
+	color: var(--bs-gray-500);
+}
+
+.form-text {
+	color: var(--bs-gray-500);
+}
+
 .navbar-toggler {
 	--bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28173, 181, 189%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 	border: var(--bs-border-width) solid var(--bs-gray-500);
@@ -85,6 +107,23 @@ small {
 
 .nav-link:hover {
 	color: var(--tango);
+}
+
+.spinner-border {
+	border-color: var(--tango);
+	border-right-color: transparent;
+}
+
+.was-validated .form-control:valid,
+.form-control.is-valid {
+	border-color: var(--fire);
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23f26716' d='M2.3 6.73.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
+}
+
+.was-validated .form-control:valid:focus,
+.form-control.is-valid:focus {
+	border-color: var(--fire);
+	box-shadow: 0 0 0 0.25rem var(--tango-25);
 }
 
 /* My Styles */
