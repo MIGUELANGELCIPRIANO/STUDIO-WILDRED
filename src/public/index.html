@@ -166,9 +166,87 @@
 		</section>
 		<section
 			id="section-4"
-			class="min-vh-100 d-flex justify-content-center align-items-center"
+			class="bg-hero-image"
+			style="--bg-image: url(../img/hero-image.jpg)"
 		>
-			<h1 class="display-1">Contact</h1>
+			<div
+				class="container min-vh-100 d-flex flex-column justify-content-center align-items-center py-5 px-5"
+			>
+				<article class="main-hero-block text-center text-white">
+					<h1 class="display-3 fw-bold">Let's Start</h1>
+					<p class="fs-5">Send your comments</p>
+					<p class="fs-6">
+						For more information, please contact me at
+						<a href="mailto:studiowildred@gmail.com">studiowildred@gmail.com</a>
+					</p>
+				</article>
+				<form
+					id="contactForm"
+					action="/send-email"
+					method="post"
+					class="needs-validation text-white"
+					novalidate
+				>
+					<div class="mb-3">
+						<label class="form-label" for="name">Name:</label>
+						<input
+							class="form-control"
+							id="name"
+							name="name"
+							placeholder="Enter your name"
+							type="text"
+							required
+						/>
+						<div class="invalid-feedback">Please enter a name.</div>
+					</div>
+					<div class="mb-3">
+						<label class="form-label" for="email">Email:</label>
+						<input
+							class="form-control"
+							id="email"
+							name="email"
+							placeholder="Enter your email"
+							type="email"
+							required
+						/>
+						<div id="emailHelp" class="form-text">
+							We'll never share your email with anyone else.
+						</div>
+						<div class="invalid-feedback">Please enter a valid email.</div>
+					</div>
+					<div class="mb-3">
+						<label class="form-label" for="message">Message:</label>
+						<textarea
+							rows="3"
+							class="form-control"
+							id="message"
+							name="message"
+							placeholder="Enter your message"
+							required
+						></textarea>
+						<div class="invalid-feedback">
+							Please enter a message in the textarea.
+						</div>
+					</div>
+					<div>
+						<button
+							type="submit"
+							class="btn btn-dark btn-lg fw-bold"
+							id="submitButton"
+						>
+							Submit
+						</button>
+						<div
+							class="spinner-border"
+							id="spinner"
+							role="status"
+							style="display: none"
+						>
+							<span class="visually-hidden">Loading...</span>
+						</div>
+					</div>
+				</form>
+			</div>
 		</section>
 		<footer class="bg-dark p-3">
 			<div class="container text-center">
