@@ -176,10 +176,12 @@
 			>
 				<article class="main-hero-block text-center text-white">
 					<h1 class="display-3 fw-bold">Let's Start</h1>
-					<p class="fs-5">Send your comments</p>
+					<p class="fs-5">Send your project request</p>
 					<p class="fs-6">
-						For more information, please contact me at
-						<a href="mailto:studiowildred@gmail.com">studiowildred@gmail.com</a>
+						Or send me an email directly at
+						<a href="mailto:miguelangel@studiowildred.com"
+							>miguelangel@studiowildred.com</a
+						>
 					</p>
 				</article>
 				<form
@@ -212,22 +214,34 @@
 							required
 						/>
 						<div id="emailHelp" class="form-text">
-							We'll never share your email with anyone else.
+							I'll never share your email with anyone else.
 						</div>
 						<div class="invalid-feedback">Please enter a valid email.</div>
 					</div>
 					<div class="mb-3">
-						<label class="form-label" for="message">Message:</label>
+						<label class="form-label" for="name">Company:</label>
+						<input
+							class="form-control"
+							id="name"
+							name="name"
+							placeholder="Enter your company"
+							type="text"
+							required
+						/>
+						<div class="invalid-feedback">Please enter a company.</div>
+					</div>
+					<div class="mb-3">
+						<label class="form-label" for="message">Project description:</label>
 						<textarea
 							rows="3"
 							class="form-control"
 							id="message"
 							name="message"
-							placeholder="Enter your message"
+							placeholder="Enter your description"
 							required
 						></textarea>
 						<div class="invalid-feedback">
-							Please enter a message in the textarea.
+							Please enter a description in the textarea.
 						</div>
 					</div>
 					<div>
