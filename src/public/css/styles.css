@@ -5,7 +5,7 @@
 	--tango-25: #f2671640;
 	--fire: #a62f03;
 	--indian-tan: #591202;
-	--indian-tan-75: #591202bf;
+	--indian-tan-50: #5a120280;
 	--sepia-black: #260101;
 	--sepia-black-75: #260101bf;
 	--cod-gray: #0d0d0d;
@@ -33,6 +33,36 @@ small {
 
 /* Bootstrap Styles */
 
+.accordion-item {
+	background-color: var(--indian-tan-50);
+}
+
+.accordion-button {
+	background-color: var(--indian-tan-50);
+	color: white;
+	border-bottom-color: var(--bs-gray-500);
+	--bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23f26716' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M2 5L8 11L14 5'/%3e%3c/svg%3e");
+}
+
+.accordion-button::after {
+	--bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23f26716' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M2 5L8 11L14 5'/%3e%3c/svg%3e");
+}
+
+.accordion-button:focus {
+	color: white;
+	box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+	color: white;
+	background-color: var(--indian-tan-50);
+}
+
+.accordion-body {
+	background-color: var(--indian-tan-50);
+	color: white;
+}
+
 .bg-dark {
 	background-color: var(--cod-gray) !important;
 }
@@ -49,14 +79,14 @@ small {
 
 .form-control {
 	color: var(--bs-white-rgb);
-	background-color: var(--indian-tan-75);
+	background-color: var(--indian-tan-50);
 	border: var(--bs-border-width) solid var(--fire);
 	transition: all 0.15s ease-in-out;
 }
 
 .form-control:focus {
 	color: var(--bs-white-rgb);
-	background-color: var(--indian-tan-75);
+	background-color: var(--indian-tan-50);
 	border: var(--bs-border-width) solid var(--fire);
 	box-shadow: 0 0 0 0.25rem var(--tango-25);
 }
