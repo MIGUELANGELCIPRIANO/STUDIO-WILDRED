@@ -146,6 +146,12 @@ small {
 	color: var(--tango) !important;
 }
 
+.nav-link:focus {
+	color: var(--tango);
+	outline: none;
+	box-shadow: none;
+}
+
 .nav-link:hover {
 	color: var(--tango);
 }
