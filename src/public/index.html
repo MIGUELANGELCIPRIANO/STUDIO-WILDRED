@@ -499,6 +499,40 @@
 			})
 		</script>
 		<script>
+			document.addEventListener('DOMContentLoaded', function () {
+				const navLinks = document.querySelectorAll('.navbar-nav .nav-link')
+
+				navLinks.forEach((link) => {
+					link.addEventListener('click', function () {
+						navLinks.forEach((link) => link.classList.remove('active'))
+						this.classList.add('active')
+					})
+				})
+
+				window.addEventListener('scroll', function () {
+					let currentSection = ''
+
+					navLinks.forEach((link) => {
+						const section = document.querySelector(link.getAttribute('href'))
+						const sectionTop = section.offsetTop
+						const sectionHeight = section.offsetHeight
+
+						if (window.pageYOffset >= sectionTop - sectionHeight / 3) {
+							currentSection = link.getAttribute('href')
+						}
+					})
+
+					navLinks.forEach((link) => link.classList.remove('active'))
+
+					if (currentSection) {
+						document
+							.querySelector(`.navbar-nav a[href="${currentSection}"]`)
+							.classList.add('active')
+					}
+				})
+			})
+		</script>
+		<script>
 			;(() => {
 				'use strict'
 
