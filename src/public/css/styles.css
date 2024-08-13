@@ -41,13 +41,14 @@ small {
 
 .accordion-item {
 	background-color: var(--indian-tan-50);
+	--bs-accordion-border-color: var(--sepia-black-75);
 }
 
 .accordion-button {
 	background-color: var(--indian-tan-50);
 	color: white;
-	border-bottom-color: var(--bs-gray-500);
-	--bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23f26716' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M2 5L8 11L14 5'/%3e%3c/svg%3e");
+	--bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M2 5L8 11L14 5'/%3e%3c/svg%3e");
+	--bs-accordion-border-color: transparent;
 }
 
 .accordion-button::after {
@@ -56,7 +57,7 @@ small {
 
 .accordion-button:focus {
 	color: white;
-	box-shadow: none;
+	box-shadow: 0 0 0 0.25rem var(--tango-25);
 }
 
 .accordion-button:not(.collapsed) {
