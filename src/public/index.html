@@ -552,6 +552,19 @@
 			})
 		</script>
 		<script>
+			document.addEventListener('click', function (event) {
+				var accordions = document.querySelectorAll('.accordion-button')
+
+				if (!event.target.closest('.accordion-item')) {
+					accordions.forEach(function (button) {
+						if (!button.classList.contains('collapsed')) {
+							button.click()
+						}
+					})
+				}
+			})
+		</script>
+		<script>
 			;(() => {
 				'use strict'
 
