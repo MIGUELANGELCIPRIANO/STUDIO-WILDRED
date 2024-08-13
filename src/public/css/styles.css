@@ -129,6 +129,26 @@ fieldset:disabled .btn {
 	border-color: var(--tango);
 }
 
+.form-check-input:checked {
+	background-color: var(--tango);
+	border-color: var(--fire);
+}
+
+.form-check-input:focus {
+	box-shadow: 0 0 0 0.25rem var(--tango-25);
+	border-color: var(--fire);
+}
+
+.form-check-input {
+	border-color: var(--fire);
+}
+
+.form-check-input:checked:focus {
+	background-color: var(--tango);
+	border-color: var(--fire);
+	box-shadow: 0 0 0 0.25rem var(--tango-25);
+}
+
 .form-control {
 	color: var(--bs-white-rgb);
 	background-color: var(--indian-tan-50);
@@ -191,6 +211,23 @@ fieldset:disabled .btn {
 .spinner-border {
 	border-color: var(--tango);
 	border-right-color: transparent;
+}
+
+.was-validated .form-check-input:valid,
+.form-check-input.is-valid {
+	border-color: var(--fire);
+}
+.was-validated .form-check-input:valid:checked,
+.form-check-input.is-valid:checked {
+	background-color: var(--tango);
+}
+.was-validated .form-check-input:valid:focus,
+.form-check-input.is-valid:focus {
+	box-shadow: 0 0 0 0.25rem var(--tango-25);
+}
+.was-validated .form-check-input:valid ~ .form-check-label,
+.form-check-input.is-valid ~ .form-check-label {
+	color: var(--bs-white);
 }
 
 .was-validated .form-control:valid,
