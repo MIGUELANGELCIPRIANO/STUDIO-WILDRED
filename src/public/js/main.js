@@ -29,28 +29,24 @@ document.addEventListener('DOMContentLoaded', function () {
 		})
 	})
 
-	// // Navbar Link Active State on Scroll
-	// window.addEventListener('scroll', function () {
-	// 	let currentSection = ''
-
-	// 	navLinks.forEach((link) => {
-	// 		const section = document.querySelector(link.getAttribute('href'))
-	// 		const sectionTop = section.offsetTop
-	// 		const sectionHeight = section.offsetHeight
-
-	// 		if (window.pageYOffset >= sectionTop - sectionHeight / 3) {
-	// 			currentSection = link.getAttribute('href')
-	// 		}
-	// 	})
-
-	// 	navLinks.forEach((link) => link.classList.remove('active'))
-
-	// 	if (currentSection) {
-	// 		document
-	// 			.querySelector(`.navbar-nav a[href="${currentSection}"]`)
-	// 			.classList.add('active')
-	// 	}
-	// })
+	// Navbar Link Active State on Scroll
+	const sections = document.querySelectorAll('section[id]')
+	window.addEventListener('scroll', () => {
+		const scrollPos = window.scrollY + navbarHeight
+		sections.forEach((section) => {
+			const sectionTop = section.offsetTop
+			const sectionHeight = section.offsetHeight
+			const sectionId = section.getAttribute('id')
+			if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+				navLinks.forEach((link) => {
+					link.classList.remove('active')
+					if (link.getAttribute('href') === `#${sectionId}`) {
+						link.classList.add('active')
+					}
+				})
+			}
+		})
+	})
 
 	// Close Navbar Collapse on Link Click
 	const bsCollapse = new bootstrap.Collapse('#navbarNav', {
