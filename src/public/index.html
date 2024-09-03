@@ -24,7 +24,7 @@
 		<link rel="icon" href="" />
 	</head>
 	<body>
-		<nav class="navbar navbar-dark sticky-top navbar-expand-lg bg-dark">
+		<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
 			<div class="container">
 				<a class="navbar-brand" href="./index.html">
 					<img src="" alt="wildred" width="auto" height="64" />
@@ -574,103 +574,6 @@
 			integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
 			crossorigin="anonymous"
 		></script>
-		<script>
-			document.addEventListener('DOMContentLoaded', function () {
-				const navbarToggler = document.querySelector('.navbar-toggler')
-
-				navbarToggler.addEventListener('click', function () {
-					if (navbarToggler.getAttribute('aria-expanded') === 'true') {
-						navbarToggler.style.boxShadow = 'none'
-					}
-				})
-
-				navbarToggler.addEventListener('focusout', function () {
-					if (navbarToggler.getAttribute('aria-expanded') === 'false') {
-						navbarToggler.style.boxShadow = ''
-					}
-				})
-			})
-		</script>
-		<script>
-			const bsCollapse = new bootstrap.Collapse('#navbarNav', {
-				toggle: false,
-			})
-
-			document.addEventListener('click', (e) => {
-				if (!e.target.matches('.navbar a')) return false
-
-				bsCollapse.hide()
-			})
-		</script>
-		<script>
-			document.addEventListener('DOMContentLoaded', function () {
-				const navLinks = document.querySelectorAll('.navbar-nav .nav-link')
-
-				navLinks.forEach((link) => {
-					link.addEventListener('click', function () {
-						navLinks.forEach((link) => link.classList.remove('active'))
-						this.classList.add('active')
-					})
-				})
-
-				window.addEventListener('scroll', function () {
-					let currentSection = ''
-
-					navLinks.forEach((link) => {
-						const section = document.querySelector(link.getAttribute('href'))
-						const sectionTop = section.offsetTop
-						const sectionHeight = section.offsetHeight
-
-						if (window.pageYOffset >= sectionTop - sectionHeight / 3) {
-							currentSection = link.getAttribute('href')
-						}
-					})
-
-					navLinks.forEach((link) => link.classList.remove('active'))
-
-					if (currentSection) {
-						document
-							.querySelector(`.navbar-nav a[href="${currentSection}"]`)
-							.classList.add('active')
-					}
-				})
-			})
-		</script>
-		<script>
-			document.addEventListener('click', function (event) {
-				var accordions = document.querySelectorAll('.accordion-button')
-
-				if (!event.target.closest('.accordion-item')) {
-					accordions.forEach(function (button) {
-						if (!button.classList.contains('collapsed')) {
-							button.click()
-						}
-					})
-				}
-			})
-		</script>
-		<script>
-			;(() => {
-				'use strict'
-
-				const forms = document.querySelectorAll('.needs-validation')
-
-				Array.from(forms).forEach((form) => {
-					form.addEventListener(
-						'submit',
-						(event) => {
-							if (!form.checkValidity()) {
-								event.preventDefault()
-								event.stopPropagation()
-							}
-
-							form.classList.add('was-validated')
-						},
-						false
-					)
-				})
-			})()
-		</script>
-		<script src="/js/main.js"></script>
+		<script src="./js/main.js"></script>
 	</body>
 </html>
