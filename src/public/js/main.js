@@ -19,11 +19,25 @@ document.addEventListener('DOMContentLoaded', function () {
 		})
 	}
 
-	// Navbar Link Active State on Click
+	// Navbar Link Active State on Click with Scroll Adjustment
 	const navLinks = document.querySelectorAll('.navbar-nav .nav-link')
 
 	navLinks.forEach((link) => {
-		link.addEventListener('click', function () {
+		link.addEventListener('click', function (e) {
+			e.preventDefault()
+
+			const targetId = this.getAttribute('href').substring(1)
+			const targetSection = document.getElementById(targetId)
+
+			if (targetSection) {
+				const targetPosition = targetSection.offsetTop - navbarHeight
+
+				window.scrollTo({
+					top: targetPosition,
+					behavior: 'smooth',
+				})
+			}
+
 			navLinks.forEach((link) => link.classList.remove('active'))
 			this.classList.add('active')
 		})
