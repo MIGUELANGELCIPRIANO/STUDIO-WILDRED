@@ -173,6 +173,11 @@ fieldset:disabled .btn {
 	color: var(--bs-gray-500);
 }
 
+.navbar-brand img {
+	width: auto;
+	height: 3rem;
+}
+
 .navbar-dark .navbar-toggler {
 	--bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28173, 181, 189%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 	transition: all 0.3s ease-out;
@@ -258,7 +263,7 @@ fieldset:disabled .btn {
 	background-position: center;
 }
 
-.main-hero-block {
+.text-shadow {
 	text-shadow: 0 0 10px var(--cod-gray);
 }
 
