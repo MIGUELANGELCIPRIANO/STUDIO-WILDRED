@@ -263,8 +263,12 @@ fieldset:disabled .btn {
 	background-position: center;
 }
 
+.drop-shadow {
+	filter: drop-shadow(1rem 1rem 1rem var(--bs-black));
+}
+
 .text-shadow {
-	text-shadow: 0 0 10px var(--cod-gray);
+	text-shadow: 0 0 1rem var(--bs-black);
 }
 
 /* X-Small devices (portrait phones, less than 576px) */
